@@ -1,0 +1,30 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        double gripperNeeded = calculateStairGripper(0.80, 12.00);
+
+        double floorAreaFT = gripperNeeded * 2 * 3.25;
+
+        double floorAreaMT = gripperNeeded * 2;
+
+        double floorAreaSticks = gripperNeeded * 2 / 1.50 ;
+
+
+
+        System.out.println("you need " + floorAreaFT + "ft of gripper.");
+
+        System.out.println("/OR " + floorAreaMT + "metres of gripper." );
+
+        System.out.println("/OR " + floorAreaSticks + "sticks of gripper (based on 1.50m unit length)" );
+    }
+
+
+
+    public static double calculateStairGripper (double stairWidth, double numberofSteps) {
+
+        double stairWidthPlusStepNum = stairWidth * numberofSteps;
+        return stairWidthPlusStepNum ;
+    }
+}
